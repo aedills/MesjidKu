@@ -15,9 +15,6 @@ class checkRole
      */
     public function handle(Request $request, Closure $next, string $role): Response
     {
-        if($role != 'admin'){
-            return response('You are not admin', 403);
-        }
         return $next($request);
     }
 }
